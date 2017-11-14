@@ -168,7 +168,7 @@ lm.utils.copy(lm.controls.Tab.prototype, {
 	 */
 	_onCloseClick: function (event) {
 		event.stopPropagation();
-		this._layoutManager['_components'][this.contentItem.config.id] = undefined;
+		delete this._layoutManager['_components'][this.contentItem.config.id];
 		this.header.parent.removeChild(this.contentItem);
 	},
 
